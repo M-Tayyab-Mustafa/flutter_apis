@@ -50,9 +50,19 @@ class _HomeScreenState extends State<HomeScreen> {
       floatingActionButton: FloatingActionButton(
         onPressed: () {
           futureOfPosts = APIService().fetchPost();
+          // APIService().insertPost().then((response) {
+          //   if (response) {
+          //     ScaffoldMessenger.of(context)
+          //         .showSnackBar(const SnackBar(content: Text('Post Inserted')));
+          //   } else {
+          //     ScaffoldMessenger.of(context).showSnackBar(const SnackBar(
+          //         content: Text('Post Insertion Faild Due to unknown reason')));
+          //   }
+          // });
+
           setState(() {});
         },
-        tooltip: 'Load Data',
+        tooltip: 'insertData Test Data',
         child: const Center(child: Icon(Icons.add)),
       ),
     );
